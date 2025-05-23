@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Site – Blogs</title>
-    <link>/blog/</link>
+    <link>https://mrdruv.github.io/Blog-XSS_Todo/blog/</link>
     <description>Recent content in Blogs on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 23 May 2025 12:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://mrdruv.github.io/Blog-XSS_Todo/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>How I Built a Secure To-Do App with XSS Protection</title>
-      <link>/blog/my-first-post/</link>
+      <link>https://mrdruv.github.io/Blog-XSS_Todo/blog/my-first-post/</link>
       <pubDate>Fri, 23 May 2025 12:00:00 +0000</pubDate>
       
-      <guid>/blog/my-first-post/</guid>
+      <guid>https://mrdruv.github.io/Blog-XSS_Todo/blog/my-first-post/</guid>
       <description>
         
         
