@@ -56,7 +56,7 @@ I use two main elements in DOM:
 
 taskInput is the textfield, and the taskList is where tasks get listed.
 
-Code: before using escapeHtml
+**Code: before using escapeHtml**
 
 ```javascript
 const taskInput = document.getElementById("taskInput");
@@ -136,7 +136,7 @@ when the code:
 ```
 
 This prints code link in task-box.So users are easily open to XSS attack.
-So to nuetralize these attacks we are using escapeHTML.Where browser displays scripts in text format.
+To prevent these attacks we are using escapeHTML function.Where browser displays scripts in text format.
 
 ### Handling XSS with escapeHTML()
 
@@ -176,56 +176,50 @@ now, using use escapeHTML(str) in task-header.
 </div>
 ```
 
-### Adding Tasks
-
-When the user presses Enter, this function is triggered:
+**code:After using escapeHTML function**
 
 ```javascript
-function addTask(taskInput, todos, taskList) {
-  const taskText = taskInput.value.trim();
-  if (taskText == "") {
-    alert("Please enter the task");
-    return;
-  }
+const taskInput = document.getElementById("taskInput");
+const taskList = document.getElementById("taskList");
 
-  const newTask = {
-    id: todos.length + 1,
-    text: taskText,
-  };
-  todos.push(newTask);
-  render(todos, taskList);
-  taskInput.value = "";
+// stores todos here
+const todos = [];
+function escapeHTML(str) {
+  return str.replace(/[&<>"']/g, function (match) {
+    const escapeChars = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;",
+    };
+    return escapeChars[match];
+  });
 }
-```
 
-### Rendering Tasks
-
-Here’s the core of the UI:
-
-```javascript
 function render(todos, taskList) {
   taskList.innerHTML = "";
 
   todos.forEach((task) => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <div class="task-header">
-        <label>
-          <input type="checkbox">
-          <span>${escapeHTML(task.text)}</span>
-        </label>
-      </div>
-      <div class="task-details" style="display: none;">
-        <div class="task-meta">
-          Added on: ${new Date().toLocaleDateString()} <br />
-          <label>Due-Date</label>
-          <input id="due-date" type="date">
-          <label>notes</label>
-          <textarea id="notesInput" placeholder="Add notes..."></textarea><br>
-        </div>
-        <button class="btn-delete" data-id="${task.id}">Delete</button>
-      </div>
-    `;
+            <div class="task-header">
+                <label>
+                <input type="checkbox">
+                <span>${escapeHTML(task.text)}</span>
+                </label>
+            </div>
+            <div class="task-details" style="display: none;">
+            <div class="task-meta">
+              Added on: ${new Date().toLocaleDateString()} <br />
+              <label>Due-Date</label>
+              <input id = "due-date" type="date">
+              <label>notes</label>
+              <textarea id="notesInput" placeholder="Add notes..."></textarea><br>
+            </div>
+            <button class="btn-delete" data-id="${task.id}">Delete</button>
+            </div>
+        `;
 
     li.addEventListener("click", () => {
       const details = li.querySelector(".task-details");
@@ -239,9 +233,32 @@ function render(todos, taskList) {
     taskList.appendChild(li);
   });
 }
-```
 
-This builds out each task, includes a checkbox, due date field, notes input, and a delete button. I also added a fun interaction — click to open, double-click to close the details section!
+function addTask(taskInput, todos, taskList) {
+  const taskText = taskInput.value.trim();
+  if (taskText == "") {
+    alert("Please enter the task");
+    return;
+  }
+
+  const newTask = {
+    id: todos.length + 1,
+    text: taskText,
+  };
+  todos.push(newTask); // add to array
+  render(todos, taskList); //render updated list
+  taskInput.value = "";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  //Enter key
+  taskInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      addTask(taskInput, todos, taskList);
+    }
+  });
+});
+```
 
 ### Wrapping Up
 
