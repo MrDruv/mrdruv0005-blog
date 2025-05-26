@@ -56,7 +56,7 @@ I use two main elements in DOM:
 
 taskInput is the textfield, and the taskList is where tasks get listed.
 
-**Code: before using escapeHtml**
+**_Code: before using escapeHtml_**
 
 ```javascript
 const taskInput = document.getElementById("taskInput");
@@ -176,7 +176,7 @@ now, using use escapeHTML(str) in task-header.
 </div>
 ```
 
-**code:After using escapeHTML function**
+**_code:After using escapeHTML function_**
 
 ```javascript
 const taskInput = document.getElementById("taskInput");
