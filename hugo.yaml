@@ -25,7 +25,7 @@ menu:
       pageRef: /about
       weight: 2
     - name: Contact ↗
-      url: "https://github.com/imfing"
+      url: "https://github.com/MrDruv"
       weight: 3
     - name: Search
       weight: 4
@@ -33,7 +33,7 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://github.com/MrDruv"
       params:
         icon: github
     - name: Twitter
@@ -42,6 +42,8 @@ menu:
       params:
         icon: x-twitter
 
+baseURL: "https://mrdruv.github.io/Blog-XSS_Todo/"
+publishDir: "public"
 params:
   navbar:
     displayTitle: true

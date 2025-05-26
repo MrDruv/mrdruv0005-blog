@@ -10,7 +10,7 @@ In this post, I’ll walk you through how I built a simple to-do list app using 
 
 Let’s dive in!
 
-### 🎯The Goal
+### The Goal
 
 I wanted to create a To-do list where:
 
@@ -18,7 +18,7 @@ I wanted to create a To-do list where:
 - Clicking on tasks reveals extra options like setting due dates and adding notes .
 - Users can even delete the tasks.
 
-### 🧠Key Concepts
+### Key Concepts
 
 The app covers:
 
@@ -45,7 +45,7 @@ Input validation checks if user input is correct before processing it — like m
 **5. XSS Protection via HTML escaping:**
 Cross-Site Scripting (XSS) is when attackers inject malicious JavaScript into your site. To prevent this, you escape special characters in user input before adding it to the DOM.
 
-### 🧩 The HTML Structure
+### The HTML Structure
 
 I use two main elements in DOM:
 
@@ -56,15 +56,97 @@ I use two main elements in DOM:
 
 taskInput is the textfield, and the taskList is where tasks get listed.
 
-### 🔐 Handling XSS with escapeHTML()
+Code: before using escapeHtml
 
-**🧪 Dangerous Input**
+```javascript
+const taskInput = document.getElementById("taskInput");
+const taskList = document.getElementById("taskList");
+
+// stores todos here
+const todos = [];
+
+function render(todos, taskList) {
+  taskList.innerHTML = "";
+
+  todos.forEach((task) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+            <div class="task-header">
+                <label>
+                <input type="checkbox">
+                <span>${task.text}</span>
+                </label>
+            </div>
+            <div class="task-details" style="display: none;">
+            <div class="task-meta">
+              Added on: ${new Date().toLocaleDateString()} <br />
+              <label>Due-Date</label>
+              <input id = "due-date" type="date">
+              <label>notes</label>
+              <textarea id="notesInput" placeholder="Add notes..."></textarea><br>
+            </div>
+            <button class="btn-delete" data-id="${task.id}">Delete</button>
+            </div>
+        `;
+
+    li.addEventListener("click", () => {
+      const details = li.querySelector(".task-details");
+      details.style.display = "block";
+    });
+    li.addEventListener("dblclick", () => {
+      const details = li.querySelector(".task-details");
+      details.style.display = "none";
+    });
+
+    taskList.appendChild(li);
+  });
+}
+
+function addTask(taskInput, todos, taskList) {
+  const taskText = taskInput.value.trim();
+  if (taskText == "") {
+    alert("Please enter the task");
+    return;
+  }
+
+  const newTask = {
+    id: todos.length + 1,
+    text: taskText,
+  };
+  todos.push(newTask); // add to array
+  render(todos, taskList); //render updated list
+  taskInput.value = "";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  //Enter key
+  taskInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      addTask(taskInput, todos, taskList);
+    }
+  });
+});
+```
+
+Here, it is open to the vulnerabilities.
+when the code:
+
+```javascript
+<a href="www.spam.com">clickforamazonvoucher</a>
+```
+
+This prints code link in task-box.So users are easily open to XSS attack.
+So to nuetralize these attacks we are using escapeHTML.Where browser displays scripts in text format.
+
+### Handling XSS with escapeHTML()
+
+**Dangerous Input**
 
 ```javascript
 <a href="www.spam.com">clickamazonvoucher</a>
 ```
 
-🛡️**Escaping it**
+**Escaping it**
 
 ```javascript
 function escapeHTML(str) {
@@ -83,7 +165,18 @@ function escapeHTML(str) {
 
 This is custom HTML sanitizer that prevents script injection.It escapes all the dangerous characters. So the browser shows text instead of executing a script.
 
-### 🧱 Adding Tasks
+now, using use escapeHTML(str) in task-header.
+
+```javascript
+<div class="task-header">
+  <label>
+    <input type="checkbox">
+      <span>${escapeHTML(task.text)}</span>
+  </label>
+</div>
+```
+
+### Adding Tasks
 
 When the user presses Enter, this function is triggered:
 
@@ -105,7 +198,7 @@ function addTask(taskInput, todos, taskList) {
 }
 ```
 
-### 🖼 Rendering Tasks
+### Rendering Tasks
 
 Here’s the core of the UI:
 
@@ -150,7 +243,7 @@ function render(todos, taskList) {
 
 This builds out each task, includes a checkbox, due date field, notes input, and a delete button. I also added a fun interaction — click to open, double-click to close the details section!
 
-### 🎉 Wrapping Up
+### Wrapping Up
 
 Here’s what I learned while building this:
 
@@ -158,7 +251,7 @@ Here’s what I learned while building this:
 - DOM manipulation is powerful when done cleanly.
 - Vanilla JavaScript is more than enough for small, effective apps.
 
-Thanks for reading! 🚀
+Thanks for reading!
 Let’s keep building — securely!
 
 -MrDruv
