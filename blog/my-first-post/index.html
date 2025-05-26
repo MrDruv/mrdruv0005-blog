@@ -13,21 +13,21 @@
 <title>How I Built a Secure To-Do App with XSS Protection – My Site</title>
   <meta name="description" content="Hey folks! 👋 In this post, I’ll walk you through how I built a simple to-do list app using just plain JavaScript — no frameworks, no dependencies, just vanilla JS. I’ll also touch on how I made it safe from common security threats like XSS (Cross-Site Scripting).
 Let’s dive in!
-🎯The Goal I wanted to create a To-do list where:
-Users can enter the tasks and click enter to add it. Clicking on tasks reveals extra options like setting due dates and adding notes . Users can even delete the tasks. 🧠Key Concepts The app covers:" /><link rel="canonical" href="https://mrdruv.github.io/Blog-XSS_Todo/blog/my-first-post/" itemprop="url" />
+The Goal I wanted to create a To-do list where:
+Users can enter the tasks and click enter to add it. Clicking on tasks reveals extra options like setting due dates and adding notes . Users can even delete the tasks. Key Concepts The app covers:" /><link rel="canonical" href="https://mrdruv.github.io/Blog-XSS_Todo/blog/my-first-post/" itemprop="url" />
 
 <meta property="og:title" content="How I Built a Secure To-Do App with XSS Protection" />
 <meta property="og:description" content="Hey folks! 👋 
 In this post, I’ll walk you through how I built a simple to-do list app using just plain JavaScript — no frameworks, no dependencies, just vanilla JS. I’ll also touch on how I made it safe from common security threats like XSS (Cross-Site Scripting).
 Let’s dive in!
-🎯The Goal
+The Goal
     I wanted to create a To-do list where:
 
 Users can enter the tasks and click enter to add it.
 Clicking on tasks reveals extra options like setting due dates and adding notes .
 Users can even delete the tasks.
 
-🧠Key Concepts
+Key Concepts
     The app covers:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrdruv.github.io/Blog-XSS_Todo/blog/my-first-post/" /><meta property="article:section" content="blog" />
@@ -37,17 +37,17 @@ Users can even delete the tasks.
   <meta itemprop="name" content="How I Built a Secure To-Do App with XSS Protection">
   <meta itemprop="description" content="Hey folks! 👋 In this post, I’ll walk you through how I built a simple to-do list app using just plain JavaScript — no frameworks, no dependencies, just vanilla JS. I’ll also touch on how I made it safe from common security threats like XSS (Cross-Site Scripting).
 Let’s dive in!
-🎯The Goal I wanted to create a To-do list where:
-Users can enter the tasks and click enter to add it. Clicking on tasks reveals extra options like setting due dates and adding notes . Users can even delete the tasks. 🧠Key Concepts The app covers:">
+The Goal I wanted to create a To-do list where:
+Users can enter the tasks and click enter to add it. Clicking on tasks reveals extra options like setting due dates and adding notes . Users can even delete the tasks. Key Concepts The app covers:">
   <meta itemprop="datePublished" content="2025-05-23T12:00:00+00:00">
   <meta itemprop="dateModified" content="2025-05-23T12:00:00+00:00">
-  <meta itemprop="wordCount" content="554">
+  <meta itemprop="wordCount" content="768">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="How I Built a Secure To-Do App with XSS Protection">
   <meta name="twitter:description" content="Hey folks! 👋 In this post, I’ll walk you through how I built a simple to-do list app using just plain JavaScript — no frameworks, no dependencies, just vanilla JS. I’ll also touch on how I made it safe from common security threats like XSS (Cross-Site Scripting).
 Let’s dive in!
-🎯The Goal I wanted to create a To-do list where:
-Users can enter the tasks and click enter to add it. Clicking on tasks reveals extra options like setting due dates and adding notes . Users can even delete the tasks. 🧠Key Concepts The app covers:">
+The Goal I wanted to create a To-do list where:
+Users can enter the tasks and click enter to add it. Clicking on tasks reveals extra options like setting due dates and adding notes . Users can even delete the tasks. Key Concepts The app covers:">
 
     <link rel="preload" href="/Blog-XSS_Todo/css/compiled/main.min.e0bb0f28123bf084d555fc9253c6d2aa1443b2dfcde6044741a207eabdc3ddb8.css" as="style" integrity="sha256-4LsPKBI78ITVVfySU8bSqhRDst/N5gRHQaIH6r3D3bg=" />
     <link href="/Blog-XSS_Todo/css/compiled/main.min.e0bb0f28123bf084d555fc9253c6d2aa1443b2dfcde6044741a207eabdc3ddb8.css" rel="stylesheet" integrity="sha256-4LsPKBI78ITVVfySU8bSqhRDst/N5gRHQaIH6r3D3bg=" />
@@ -267,31 +267,31 @@ Users can enter the tasks and click enter to add it. Clicking on tasks reveals e
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#the-goal">🎯The Goal
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#the-goal">The Goal
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#key-concepts">🧠Key Concepts
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#key-concepts">Key Concepts
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#-the-html-structure">🧩 The HTML Structure
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#the-html-structure">The HTML Structure
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#-handling-xss-with-escapehtml">🔐 Handling XSS with escapeHTML()
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#handling-xss-with-escapehtml">Handling XSS with escapeHTML()
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#-adding-tasks">🧱 Adding Tasks
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#adding-tasks">Adding Tasks
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#-rendering-tasks">🖼 Rendering Tasks
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#rendering-tasks">Rendering Tasks
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#-wrapping-up">🎉 Wrapping Up
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#wrapping-up">Wrapping Up
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400"><a class="hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50" href="https://github.com/imfing/hextra-starter-template/edit/main/content/blog/my-first-post.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
@@ -321,14 +321,14 @@ Users can enter the tasks and click enter to add it. Clicking on tasks reveals e
           <p>Hey folks! 👋 <br>
 In this post, I’ll walk you through how I built a simple to-do list app using just plain JavaScript — no frameworks, no dependencies, just vanilla JS. I’ll also touch on how I made it safe from common security threats like XSS (Cross-Site Scripting).</p>
 <p>Let’s dive in!</p>
-<h3>🎯The Goal<span class="hx-absolute -hx-mt-20" id="the-goal"></span>
+<h3>The Goal<span class="hx-absolute -hx-mt-20" id="the-goal"></span>
     <a href="#the-goal" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>I wanted to create a To-do list where:</p>
 <ul>
 <li>Users can enter the tasks and click enter to add it.</li>
 <li>Clicking on tasks reveals extra options like setting due dates and adding notes .</li>
 <li>Users can even delete the tasks.</li>
 </ul>
-<h3>🧠Key Concepts<span class="hx-absolute -hx-mt-20" id="key-concepts"></span>
+<h3>Key Concepts<span class="hx-absolute -hx-mt-20" id="key-concepts"></span>
     <a href="#key-concepts" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The app covers:</p>
 <ul>
 <li>DOM manipulation</li>
@@ -348,8 +348,8 @@ Dynamic rendering means updating parts of the web page automatically as the user
 Input validation checks if user input is correct before processing it — like making sure a name field isn&rsquo;t empty or an email is formatted properly.</p>
 <p><strong>5. XSS Protection via HTML escaping:</strong>
 Cross-Site Scripting (XSS) is when attackers inject malicious JavaScript into your site. To prevent this, you escape special characters in user input before adding it to the DOM.</p>
-<h3>🧩 The HTML Structure<span class="hx-absolute -hx-mt-20" id="-the-html-structure"></span>
-    <a href="#-the-html-structure" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>I use two main elements in DOM:</p>
+<h3>The HTML Structure<span class="hx-absolute -hx-mt-20" id="the-html-structure"></span>
+    <a href="#the-html-structure" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>I use two main elements in DOM:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&#34;taskInput&#34;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&#34;Add a task...&#34;</span> <span class="o">/&gt;</span>
@@ -364,8 +364,103 @@ Cross-Site Scripting (XSS) is when attackers inject malicious JavaScript into yo
 </div>
 </div>
 <p>taskInput is the textfield, and the taskList is where tasks get listed.</p>
-<h3>🔐 Handling XSS with escapeHTML()<span class="hx-absolute -hx-mt-20" id="-handling-xss-with-escapehtml"></span>
-    <a href="#-handling-xss-with-escapehtml" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>🧪 Dangerous Input</strong></p>
+<p>Code: before using escapeHtml</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">taskInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;taskInput&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">taskList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;taskList&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// stores todos here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">todos</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">render</span><span class="p">(</span><span class="nx">todos</span><span class="p">,</span> <span class="nx">taskList</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">taskList</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">todos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">task</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">li</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;li&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">li</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;div class=&#34;task-header&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">                &lt;label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">                &lt;input type=&#34;checkbox&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">                &lt;span&gt;</span><span class="si">${</span><span class="nx">task</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span><span class="sb">&lt;/span&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">                &lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;div class=&#34;task-details&#34; style=&#34;display: none;&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;div class=&#34;task-meta&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">              Added on: </span><span class="si">${</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleDateString</span><span class="p">()</span><span class="si">}</span><span class="sb"> &lt;br /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">              &lt;label&gt;Due-Date&lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">              &lt;input id = &#34;due-date&#34; type=&#34;date&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">              &lt;label&gt;notes&lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">              &lt;textarea id=&#34;notesInput&#34; placeholder=&#34;Add notes...&#34;&gt;&lt;/textarea&gt;&lt;br&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;button class=&#34;btn-delete&#34; data-id=&#34;</span><span class="si">${</span><span class="nx">task</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">&#34;&gt;Delete&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        `</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">li</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">details</span> <span class="o">=</span> <span class="nx">li</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.task-details&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">details</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;block&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">li</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;dblclick&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">details</span> <span class="o">=</span> <span class="nx">li</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.task-details&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">details</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">taskList</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">addTask</span><span class="p">(</span><span class="nx">taskInput</span><span class="p">,</span> <span class="nx">todos</span><span class="p">,</span> <span class="nx">taskList</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">taskText</span> <span class="o">=</span> <span class="nx">taskInput</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">taskText</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Please enter the task&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">newTask</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span><span class="o">:</span> <span class="nx">todos</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">text</span><span class="o">:</span> <span class="nx">taskText</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">todos</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">newTask</span><span class="p">);</span> <span class="c1">// add to array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">render</span><span class="p">(</span><span class="nx">todos</span><span class="p">,</span> <span class="nx">taskList</span><span class="p">);</span> <span class="c1">//render updated list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">taskInput</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;DOMContentLoaded&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Enter key
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">taskInput</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;keydown&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="s2">&#34;Enter&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">addTask</span><span class="p">(</span><span class="nx">taskInput</span><span class="p">,</span> <span class="nx">todos</span><span class="p">,</span> <span class="nx">taskList</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>Here, it is open to the vulnerabilities.
+when the code:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;www.spam.com&#34;</span><span class="o">&gt;</span><span class="nx">clickforamazonvoucher</span><span class="o">&lt;</span><span class="err">/a&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>This prints code link in task-box.So users are easily open to XSS attack.
+So to nuetralize these attacks we are using escapeHTML.Where browser displays scripts in text format.</p>
+<h3>Handling XSS with escapeHTML()<span class="hx-absolute -hx-mt-20" id="handling-xss-with-escapehtml"></span>
+    <a href="#handling-xss-with-escapehtml" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Dangerous Input</strong></p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;www.spam.com&#34;</span><span class="o">&gt;</span><span class="nx">clickamazonvoucher</span><span class="o">&lt;</span><span class="err">/a&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
@@ -378,7 +473,7 @@ Cross-Site Scripting (XSS) is when attackers inject malicious JavaScript into yo
   </button>
 </div>
 </div>
-<p>🛡️<strong>Escaping it</strong></p>
+<p><strong>Escaping it</strong></p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">escapeHTML</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
@@ -403,8 +498,26 @@ Cross-Site Scripting (XSS) is when attackers inject malicious JavaScript into yo
 </div>
 </div>
 <p>This is custom HTML sanitizer that prevents script injection.It escapes all the dangerous characters. So the browser shows text instead of executing a script.</p>
-<h3>🧱 Adding Tasks<span class="hx-absolute -hx-mt-20" id="-adding-tasks"></span>
-    <a href="#-adding-tasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When the user presses Enter, this function is triggered:</p>
+<p>now, using use escapeHTML(str) in task-header.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;task-header&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;checkbox&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="nx">$</span><span class="p">{</span><span class="nx">escapeHTML</span><span class="p">(</span><span class="nx">task</span><span class="p">.</span><span class="nx">text</span><span class="p">)}</span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/label&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/div&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Adding Tasks<span class="hx-absolute -hx-mt-20" id="adding-tasks"></span>
+    <a href="#adding-tasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When the user presses Enter, this function is triggered:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">addTask</span><span class="p">(</span><span class="nx">taskInput</span><span class="p">,</span> <span class="nx">todos</span><span class="p">,</span> <span class="nx">taskList</span><span class="p">)</span> <span class="p">{</span>
@@ -431,8 +544,8 @@ Cross-Site Scripting (XSS) is when attackers inject malicious JavaScript into yo
   </button>
 </div>
 </div>
-<h3>🖼 Rendering Tasks<span class="hx-absolute -hx-mt-20" id="-rendering-tasks"></span>
-    <a href="#-rendering-tasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Here’s the core of the UI:</p>
+<h3>Rendering Tasks<span class="hx-absolute -hx-mt-20" id="rendering-tasks"></span>
+    <a href="#rendering-tasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Here’s the core of the UI:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">render</span><span class="p">(</span><span class="nx">todos</span><span class="p">,</span> <span class="nx">taskList</span><span class="p">)</span> <span class="p">{</span>
@@ -481,14 +594,14 @@ Cross-Site Scripting (XSS) is when attackers inject malicious JavaScript into yo
 </div>
 </div>
 <p>This builds out each task, includes a checkbox, due date field, notes input, and a delete button. I also added a fun interaction — click to open, double-click to close the details section!</p>
-<h3>🎉 Wrapping Up<span class="hx-absolute -hx-mt-20" id="-wrapping-up"></span>
-    <a href="#-wrapping-up" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Here’s what I learned while building this:</p>
+<h3>Wrapping Up<span class="hx-absolute -hx-mt-20" id="wrapping-up"></span>
+    <a href="#wrapping-up" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Here’s what I learned while building this:</p>
 <ul>
 <li>Always sanitize user input!</li>
 <li>DOM manipulation is powerful when done cleanly.</li>
 <li>Vanilla JavaScript is more than enough for small, effective apps.</li>
 </ul>
-<p>Thanks for reading! 🚀
+<p>Thanks for reading!
 Let’s keep building — securely!</p>
 <p>-MrDruv</p>
 
