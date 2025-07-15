@@ -12,7 +12,7 @@ Zustand (German for "state") is a lightweight state management library built on 
 ## Key Features
 
 - Hooks-based API: You use it like a regular React hook.
-- No context providers: You don’t need to wrap your app in <Provider> components.
+- No context providers: You don’t need to wrap your app in _Provider_ components.
 - Minimal boilerplate: Just a few lines to create a store.
 - Scalable: Works for small apps and large ones with thousands of components.
 - Performance-optimized: Avoids unnecessary re-renders.
@@ -159,7 +159,7 @@ function App() {
 export default App;
 ```
 
-Clean and shareable across components—no <Provider> needed.
+Clean and shareable across components—no _Provider_ needed.
 
 ### React + Redux Toolkit
 
