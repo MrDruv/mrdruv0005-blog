@@ -1,7 +1,7 @@
 ---
 title: "Grokking Simplicity By Eric Norman"
 
-date: 2025-07-15T12:00:00Z
+date: 2025-07-15
 draft: false
 ---
 
