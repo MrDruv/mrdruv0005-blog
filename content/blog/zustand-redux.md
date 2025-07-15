@@ -5,6 +5,8 @@ date: 2025-07-15
 draft: false
 ---
 
+> replace all usestate with usestore()
+
 ## What Is Zustand?
 
 Zustand (German for "state") is a lightweight state management library built on React hooks. It’s designed to be minimal, fast, and easy to use.
