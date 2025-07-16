@@ -22,7 +22,9 @@ now refactoring few things.
 **useStore instead of useState**
 
 **useState**:React's built-in _Local State_.
+
 **useStore**:Zustand's _global state_
+
 **useState**
 
 ```javascript
