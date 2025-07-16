@@ -1,5 +1,5 @@
 ---
-title: BLog posts
+title: Blog posts
 toc: false
 ---
 
