@@ -39,6 +39,8 @@ const { tasks, setTasks } = useStore();
 
 ## Refactoring 2 (State Manager- ReactQuery)
 
+> PR: https://github.com/MrDruv/Endeavour-with-react/pull/9#issue-3231491369
+
 Instead of writting boilerplate like below:
 
 ```javascript
@@ -59,5 +61,6 @@ const { data, isLoading, error } = useQuery(["todos"], fetchTodos);
 It handles the rest.
 
 So,
-React Query -> handles server state(todo, user info)
-Zustand -> handles client state (current input, expanded task, token, UI flags)
+
+- React Query -> handles server state(todo, user info)
+- Zustand -> handles client state (current input, expanded task, token, UI flags)
