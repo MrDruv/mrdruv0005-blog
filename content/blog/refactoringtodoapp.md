@@ -1,5 +1,5 @@
 ---
-title: "refactoring my todo app"
+title: "Refactoring my todo app"
 
 date: 2025-07-15
 draft: false
