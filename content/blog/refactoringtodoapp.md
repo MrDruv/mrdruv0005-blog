@@ -9,7 +9,7 @@ First i have build Endeavour-Todo-App using below tech.
 
 - React(**useState**, **useEffect**)
 - Nestjs + prisma
-- postgres
+- postgreSQL
 
 now refactoring few things.
 
