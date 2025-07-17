@@ -54,7 +54,7 @@ station wlan0 get-networks
 station wlan0 connect yourSSID
 ```
 
-## Pre-installation step
+## Steps
 
 **Partition the SSD Manually:**
 Use fdisk or cfdisk
@@ -82,7 +82,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 ```
 
-Finally **pre-install environment** setup is done.
+Finally setup is done.
 
 Now install Desktop environment based on requirement.
 
@@ -95,7 +95,7 @@ Now install Desktop environment based on requirement.
 | Xfce                | Lightweight,stable,classic  | xfce4        |
 | LXQt                | lightweight,Qt-based        | lxqt         |
 
-Still more you view in the given source: https://wiki.archlinux.org/title/Desktop_environment
+source: https://wiki.archlinux.org/title/Desktop_environment
 
 I am using GNOME as my desktop environment.
 
