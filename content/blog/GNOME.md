@@ -30,3 +30,14 @@ sudo pacman -S gnome
 **Why it is required:**Without GDM, you'd need to start GNOME manually from the terminal.
 
 **Step5 - Enable GDM to auto-start at boot:**Without this have to manually start the GUI.
+
+```
+sudo systemctl enable gdm
+sudo systemctl start gdm
+
+
+This finally completes GNOME installation. Now we can use desktop environment.
+
+Still more to go.....
+Thanks for reading!
+```
