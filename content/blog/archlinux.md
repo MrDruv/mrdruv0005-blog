@@ -10,9 +10,11 @@ Let us know few things about Arch Linux
 
 It is a minimalist, highly customizable, and independent Linux distribution designed for users who prefer "do it yourself" approach.
 
-**Rolling release:**instead of major version updates, Arch linux recieves continuous updates, ensuring always have to access to latest software versions.
-**Package manager:**Arch uses its own package manager **pacman** for installing, removing and updating software.
-**pacman -Sy:**Updates local package database with information from remote repositories.
+**Rolling release:** instead of major version updates, Arch linux recieves continuous updates, ensuring always have to access to latest software versions.
+
+**Package manager:** Arch uses its own package manager **pacman** for installing, removing and updating software.
+
+**pacman -Sy:** Updates local package database with information from remote repositories.
 
 Detailed:
 
