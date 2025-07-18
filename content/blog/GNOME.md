@@ -6,7 +6,9 @@ draft: false
 
 ## GNOME installation on Arch Linux
 
-**Step1:** Basic step is to **update your system:**Updates all packages and the system to the latest versions.
+**Step1: **update your system:\*\*
+
+Updates all packages and the system to the latest versions.
 
 ```
 sudo pacman -Syu
@@ -26,8 +28,13 @@ sudo pacman -S xorg xorg-server
 sudo pacman -S gnome
 ```
 
-**Step4 - Install GDM(GNOME Display Manager):** Installs the GNOME Display Manager(GDM),the login screen and session manager.
-**Why it is required:**Without GDM, you'd need to start GNOME manually from the terminal.
+**Step4 - Install GDM(GNOME Display Manager):**
+
+Installs the GNOME Display Manager(GDM),the login screen and session manager.
+
+**Why it is required:**
+
+Without GDM, you'd need to start GNOME manually from the terminal.
 
 **Step5 - Enable GDM to auto-start at boot:** Without this have to manually start the GUI.
 
@@ -39,4 +46,5 @@ sudo systemctl start gdm
 This finally completes GNOME installation. Now we can use desktop environment.
 
 Still more to go.....
+
 Thanks for reading!
