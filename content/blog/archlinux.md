@@ -16,9 +16,12 @@ It is a minimalist, highly customizable, and independent Linux distribution desi
 
 Detailed:
 
-**pacman:**Command-line package manager for Arch-linux.
-**-S(or --sync):**used for installing,removing or upgrading packages.
-**-y(or --refresh):**for refresh
+**pacman:** Command-line package manager for Arch-linux.
+
+**-S(or --sync):** used for installing,removing or upgrading packages.
+
+**-y(or --refresh):** for refresh
+
 It is not **pre-configured** and not **beginner friendly**. Need to configure everything themselves.
 
 ## Create a Bootable USB with UEFI + Gpt(based on system boot mode)
