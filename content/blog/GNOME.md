@@ -6,7 +6,7 @@ draft: false
 
 ## GNOME installation on Arch Linux
 
-**Step1: **update your system:\*\*
+**Step1: update your system:**
 
 Updates all packages and the system to the latest versions.
 
