@@ -79,9 +79,25 @@ mkfs.ext4 /dev/nvme0n1p1
 **Mounting**
 
 ```
-mount /dev/nvmen1p2 /mnt
+mount /dev/sda2 /mnt
 mkdir /mnt/boot
-mount /dev/nvme0n1p1 /mnt/boot
+mount /dev/sda1 /mnt/boot/efi
+
+```
+
+**Proceed with Arch install**
+
+```
+pacstrap /mnt base linux linux-firmware
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+```
+
+**Then GRUB for UEFI**
+
+```
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
 ```
 
