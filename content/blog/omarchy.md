@@ -19,7 +19,7 @@ You need to configure everything from scratch.
 
 First need to install Arch Linux.
 
-Installations guide of **Arch linux:** https://mrdruv0005.netlify.app/blog/archlinux/
+Installations guide for **Arch linux:** https://mrdruv0005.netlify.app/blog/archlinux/
 
 This is manual installation process for archlinux. You can install it directly using **Archinstall** inside live ISO.
 
