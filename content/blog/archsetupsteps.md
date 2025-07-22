@@ -1,3 +1,9 @@
+---
+title: "GNOME setup requirement"
+date: 2025-07-19
+draft: false
+---
+
 Gnome terminal needs dbus,vte3 and gnome-shell to run
 
 sudo pacman -S vte3 gnome-shell dbus
